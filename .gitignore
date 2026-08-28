@@ -28,3 +28,18 @@ csp-*.tar
 .vscode/
 
 *.class
+
+*.out
+*.o
+*.hi
+
+haskell/csp2
+haskell/csp2-9.14
+haskell/csp2.2
+haskell/csp3
+
+d/main
+
+rust/main2
+rust/main
+

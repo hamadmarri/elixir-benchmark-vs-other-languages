@@ -1,74 +1,59 @@
+=========== Elixir =========== :
 MIX_ENV=prod iex --erl "+a 8192 +hms 29824" -S mix # best so far
 Erlang/OTP 26 [erts-14.1.1] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:1] [jit:ns]
 
 Interactive Elixir (1.15.7) - press Ctrl+C to exit (type h() ENTER for help)
-iex(1)> iex(1)> Csp.NormalList.start([7, 7, 7, 7, 7, 7, 7, 5, 10], 10)
-QUEUE: [~c"\n", ~c"\t", ~c"\b", ~c"\a", [6], [5], [4], [3], [2], [1]]
+iex(1)> Csp.NormalList.start([7, 7, 7, 7, 7, 7, 7, 5, 10], 2)
+QUEUE: [{~c"\n", 1}, {~c"\t", 1}, {~c"\b", 1}, {~c"\a", 1}, {[6], 1}, {[5], 1}, {[4], 1}, {[3], 1}, {[2], 1}, {[1], 1}]
 FOUND A SOLUTION [7, 7, 7, 7, 7, 7, 7, 5, 10], count: 592592650
-{20985293, :ok}
-QUEUE: [~c"\n", ~c"\t", ~c"\b", ~c"\a", [6], [5], [4], [3], [2], [1]]
+{10464842, :ok}
+QUEUE: [{~c"\n", 1}, {~c"\t", 1}, {~c"\b", 1}, {~c"\a", 1}, {[6], 1}, {[5], 1}, {[4], 1}, {[3], 1}, {[2], 1}, {[1], 1}]
 FOUND A SOLUTION [7, 7, 7, 7, 7, 7, 7, 5, 10], count: 592592650
-{21175791, :ok}
-QUEUE: [~c"\n", ~c"\t", ~c"\b", ~c"\a", [6], [5], [4], [3], [2], [1]]
-FOUND A SOLUTION [7, 7, 7, 7, 7, 7, 7, 5, 10], count: 592592650
-{21233216, :ok}
-QUEUE: [~c"\n", ~c"\t", ~c"\b", ~c"\a", [6], [5], [4], [3], [2], [1]]
-FOUND A SOLUTION [7, 7, 7, 7, 7, 7, 7, 5, 10], count: 592592650
-{21144095, :ok}
-QUEUE: [~c"\n", ~c"\t", ~c"\b", ~c"\a", [6], [5], [4], [3], [2], [1]]
-FOUND A SOLUTION [7, 7, 7, 7, 7, 7, 7, 5, 10], count: 592592650
-{21163276, :ok}
-QUEUE: [~c"\n", ~c"\t", ~c"\b", ~c"\a", [6], [5], [4], [3], [2], [1]]
-FOUND A SOLUTION [7, 7, 7, 7, 7, 7, 7, 5, 10], count: 592592650
-{21125364, :ok}
-QUEUE: [~c"\n", ~c"\t", ~c"\b", ~c"\a", [6], [5], [4], [3], [2], [1]]
-FOUND A SOLUTION [7, 7, 7, 7, 7, 7, 7, 5, 10], count: 592592650
-{20989800, :ok}
-QUEUE: [~c"\n", ~c"\t", ~c"\b", ~c"\a", [6], [5], [4], [3], [2], [1]]
-FOUND A SOLUTION [7, 7, 7, 7, 7, 7, 7, 5, 10], count: 592592650
-{20958159, :ok}
-QUEUE: [~c"\n", ~c"\t", ~c"\b", ~c"\a", [6], [5], [4], [3], [2], [1]]
-FOUND A SOLUTION [7, 7, 7, 7, 7, 7, 7, 5, 10], count: 592592650
-{20834648, :ok}
-QUEUE: [~c"\n", ~c"\t", ~c"\b", ~c"\a", [6], [5], [4], [3], [2], [1]]
-FOUND A SOLUTION [7, 7, 7, 7, 7, 7, 7, 5, 10], count: 592592650
-{20887855, :ok}
-
-total: 210497497
-average: 21049749 ~21s / 3.75s / 1.22x slower than Go
+{10466737, :ok}
 
 
 
 
+=========== Haskell ===========:
+time ./csp
+QUEUE: [[10],[9],[8],[7],[6],[5],[4],[3],[2],[1]]
+FOUND A SOLUTION [7,7,7,7,7,7,7,5,10], count: 592592650
 
-MIX_ENV=prod mix run -e "Csp.NormalList.start([7, 7, 7, 7, 7, 7, 7, 5, 10], 10)"
-QUEUE: [~c"\n", ~c"\t", ~c"\b", ~c"\a", [6], [5], [4], [3], [2], [1]]
-FOUND A SOLUTION [7, 7, 7, 7, 7, 7, 7, 5, 10], count: 592592650
-{23360071, :ok} # microseconds
-QUEUE: [~c"\n", ~c"\t", ~c"\b", ~c"\a", [6], [5], [4], [3], [2], [1]]
-FOUND A SOLUTION [7, 7, 7, 7, 7, 7, 7, 5, 10], count: 592592650
-{24467422, :ok}
-QUEUE: [~c"\n", ~c"\t", ~c"\b", ~c"\a", [6], [5], [4], [3], [2], [1]]
-FOUND A SOLUTION [7, 7, 7, 7, 7, 7, 7, 5, 10], count: 592592650
-{23862711, :ok}
-QUEUE: [~c"\n", ~c"\t", ~c"\b", ~c"\a", [6], [5], [4], [3], [2], [1]]
-FOUND A SOLUTION [7, 7, 7, 7, 7, 7, 7, 5, 10], count: 592592650
-{24574987, :ok}
-QUEUE: [~c"\n", ~c"\t", ~c"\b", ~c"\a", [6], [5], [4], [3], [2], [1]]
-FOUND A SOLUTION [7, 7, 7, 7, 7, 7, 7, 5, 10], count: 592592650
-{23642599, :ok}
-QUEUE: [~c"\n", ~c"\t", ~c"\b", ~c"\a", [6], [5], [4], [3], [2], [1]]
-FOUND A SOLUTION [7, 7, 7, 7, 7, 7, 7, 5, 10], count: 592592650
-{24009497, :ok}
-QUEUE: [~c"\n", ~c"\t", ~c"\b", ~c"\a", [6], [5], [4], [3], [2], [1]]
-FOUND A SOLUTION [7, 7, 7, 7, 7, 7, 7, 5, 10], count: 592592650
-{23551078, :ok}
-QUEUE: [~c"\n", ~c"\t", ~c"\b", ~c"\a", [6], [5], [4], [3], [2], [1]]
-FOUND A SOLUTION [7, 7, 7, 7, 7, 7, 7, 5, 10], count: 592592650
-{24261542, :ok}
-QUEUE: [~c"\n", ~c"\t", ~c"\b", ~c"\a", [6], [5], [4], [3], [2], [1]]
-FOUND A SOLUTION [7, 7, 7, 7, 7, 7, 7, 5, 10], count: 592592650
-{23710721, :ok}
-QUEUE: [~c"\n", ~c"\t", ~c"\b", ~c"\a", [6], [5], [4], [3], [2], [1]]
-FOUND A SOLUTION [7, 7, 7, 7, 7, 7, 7, 5, 10], count: 592592650
-{24284544, :ok}
+________________________________________________________
+Executed in    3.86 secs    fish           external
+   usr time    3.86 secs    0.00 micros    3.86 secs
+   sys time    0.00 secs  444.00 micros    0.00 secs
+
+
+
+=========== Go ===========:
+./csp.com
+init stack [[1] [2] [3] [4] [5] [6] [7] [8] [9] [10]]
+FOUND A SOLUTION [7 7 7 7 7 7 7 5 10], count: 592592650
+time: 11.591357s
+init stack [[1] [2] [3] [4] [5] [6] [7] [8] [9] [10]]
+FOUND A SOLUTION [7 7 7 7 7 7 7 5 10], count: 592592650
+time: 11.345901s
+init stack [[1] [2] [3] [4] [5] [6] [7] [8] [9] [10]]
+FOUND A SOLUTION [7 7 7 7 7 7 7 5 10], count: 592592650
+time: 11.425826s
+init stack [[1] [2] [3] [4] [5] [6] [7] [8] [9] [10]]
+FOUND A SOLUTION [7 7 7 7 7 7 7 5 10], count: 592592650
+time: 11.266449s
+init stack [[1] [2] [3] [4] [5] [6] [7] [8] [9] [10]]
+
+
+=========== C ===========:
+./a.out
+[ [ 10 ] [ 9 ] [ 8 ] [ 7 ] [ 6 ] [ 5 ] [ 4 ] [ 3 ] [ 2 ] [ 1 ] ]
+FOUND A SOLUTION: [ 7 7 7 7 7 7 7 5 10 ] count: 592592650
+done distroy stack ints
+done distroy stack stacks
+time: 6.340167s
+[ [ 10 ] [ 9 ] [ 8 ] [ 7 ] [ 6 ] [ 5 ] [ 4 ] [ 3 ] [ 2 ] [ 1 ] ]
+FOUND A SOLUTION: [ 7 7 7 7 7 7 7 5 10 ] count: 592592650
+done distroy stack ints
+done distroy stack stacks
+time: 6.333462s
+[ [ 10 ] [ 9 ] [ 8 ] [ 7 ] [ 6 ] [ 5 ] [ 4 ] [ 3 ] [ 2 ] [ 1 ] ]
+

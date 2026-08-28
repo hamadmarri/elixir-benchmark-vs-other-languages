@@ -1,0 +1,178 @@
+Rust:
+for i in (seq 10); time ./main ; sleep 3 ; end
+FOUND A SOLUTION 7 7 7 7 7 7 7 5 10 , count: 592592650
+time: 3.156658s
+
+________________________________________________________
+Executed in    3.16 secs    fish           external
+   usr time    3.16 secs  173.00 micros    3.16 secs
+   sys time    0.00 secs   80.00 micros    0.00 secs
+
+FOUND A SOLUTION 7 7 7 7 7 7 7 5 10 , count: 592592650
+time: 3.154640s
+
+________________________________________________________
+Executed in    3.16 secs    fish           external
+   usr time    3.15 secs  185.00 micros    3.15 secs
+   sys time    0.00 secs   87.00 micros    0.00 secs
+
+FOUND A SOLUTION 7 7 7 7 7 7 7 5 10 , count: 592592650
+time: 3.058264s
+
+________________________________________________________
+Executed in    3.06 secs    fish           external
+   usr time    3.06 secs    0.00 micros    3.06 secs
+   sys time    0.00 secs  284.00 micros    0.00 secs
+
+FOUND A SOLUTION 7 7 7 7 7 7 7 5 10 , count: 592592650
+time: 3.067581s
+
+________________________________________________________
+Executed in    3.07 secs    fish           external
+   usr time    3.07 secs   12.00 micros    3.07 secs
+   sys time    0.00 secs  260.00 micros    0.00 secs
+
+FOUND A SOLUTION 7 7 7 7 7 7 7 5 10 , count: 592592650
+time: 3.153470s
+
+________________________________________________________
+Executed in    3.15 secs    fish           external
+   usr time    3.15 secs    0.00 micros    3.15 secs
+   sys time    0.00 secs  297.00 micros    0.00 secs
+
+FOUND A SOLUTION 7 7 7 7 7 7 7 5 10 , count: 592592650
+time: 3.061059s
+
+________________________________________________________
+Executed in    3.06 secs    fish           external
+   usr time    3.06 secs    3.00 micros    3.06 secs
+   sys time    0.00 secs  243.00 micros    0.00 secs
+
+FOUND A SOLUTION 7 7 7 7 7 7 7 5 10 , count: 592592650
+time: 3.104592s
+
+________________________________________________________
+Executed in    3.11 secs    fish           external
+   usr time    3.11 secs    0.00 micros    3.11 secs
+   sys time    0.00 secs  294.00 micros    0.00 secs
+
+FOUND A SOLUTION 7 7 7 7 7 7 7 5 10 , count: 592592650
+time: 3.115603s
+
+________________________________________________________
+Executed in    3.12 secs    fish           external
+   usr time    3.11 secs    0.00 micros    3.11 secs
+   sys time    0.00 secs  412.00 micros    0.00 secs
+
+FOUND A SOLUTION 7 7 7 7 7 7 7 5 10 , count: 592592650
+time: 3.162171s
+
+________________________________________________________
+Executed in    3.16 secs    fish           external
+   usr time    3.16 secs    0.00 micros    3.16 secs
+   sys time    0.00 secs  223.00 micros    0.00 secs
+
+FOUND A SOLUTION 7 7 7 7 7 7 7 5 10 , count: 592592650
+time: 3.157790s
+
+________________________________________________________
+Executed in    3.16 secs    fish           external
+   usr time    3.16 secs  127.00 micros    3.16 secs
+   sys time    0.00 secs   60.00 micros    0.00 secs
+
+
+========================================================
+
+
+Haskel:
+for i in (seq 10); time ./csp2-9.14 ; sleep 3 ; end
+QUEUE: [[10],[9],[8],[7],[6],[5],[4],[3],[2],[1]]
+FOUND A SOLUTION [7,7,7,7,7,7,7,5,10], count: 592592650
+
+________________________________________________________
+Executed in    2.32 secs    fish           external
+   usr time    2.32 secs  127.00 micros    2.32 secs
+   sys time    0.00 secs   60.00 micros    0.00 secs
+
+QUEUE: [[10],[9],[8],[7],[6],[5],[4],[3],[2],[1]]
+FOUND A SOLUTION [7,7,7,7,7,7,7,5,10], count: 592592650
+
+________________________________________________________
+Executed in    2.20 secs    fish           external
+   usr time    2.20 secs  179.00 micros    2.20 secs
+   sys time    0.01 secs    0.00 micros    0.01 secs
+
+QUEUE: [[10],[9],[8],[7],[6],[5],[4],[3],[2],[1]]
+FOUND A SOLUTION [7,7,7,7,7,7,7,5,10], count: 592592650
+
+________________________________________________________
+Executed in    2.15 secs    fish           external
+   usr time    2.16 secs  130.00 micros    2.16 secs
+   sys time    0.00 secs   20.00 micros    0.00 secs
+
+QUEUE: [[10],[9],[8],[7],[6],[5],[4],[3],[2],[1]]
+FOUND A SOLUTION [7,7,7,7,7,7,7,5,10], count: 592592650
+
+________________________________________________________
+Executed in    2.13 secs    fish           external
+   usr time    2.13 secs  128.00 micros    2.13 secs
+   sys time    0.00 secs   61.00 micros    0.00 secs
+
+QUEUE: [[10],[9],[8],[7],[6],[5],[4],[3],[2],[1]]
+FOUND A SOLUTION [7,7,7,7,7,7,7,5,10], count: 592592650
+
+________________________________________________________
+Executed in    2.19 secs    fish           external
+   usr time    2.19 secs  130.00 micros    2.19 secs
+   sys time    0.01 secs   61.00 micros    0.01 secs
+
+QUEUE: [[10],[9],[8],[7],[6],[5],[4],[3],[2],[1]]
+FOUND A SOLUTION [7,7,7,7,7,7,7,5,10], count: 592592650
+
+________________________________________________________
+Executed in    2.15 secs    fish           external
+   usr time    2.15 secs  109.00 micros    2.15 secs
+   sys time    0.00 secs   52.00 micros    0.00 secs
+
+QUEUE: [[10],[9],[8],[7],[6],[5],[4],[3],[2],[1]]
+FOUND A SOLUTION [7,7,7,7,7,7,7,5,10], count: 592592650
+
+________________________________________________________
+Executed in    2.16 secs    fish           external
+   usr time    2.17 secs    0.00 micros    2.17 secs
+   sys time    0.00 secs  235.00 micros    0.00 secs
+
+QUEUE: [[10],[9],[8],[7],[6],[5],[4],[3],[2],[1]]
+FOUND A SOLUTION [7,7,7,7,7,7,7,5,10], count: 592592650
+
+________________________________________________________
+Executed in    2.17 secs    fish           external
+   usr time    2.17 secs    0.00 micros    2.17 secs
+   sys time    0.00 secs  246.00 micros    0.00 secs
+
+QUEUE: [[10],[9],[8],[7],[6],[5],[4],[3],[2],[1]]
+FOUND A SOLUTION [7,7,7,7,7,7,7,5,10], count: 592592650
+
+________________________________________________________
+Executed in    2.16 secs    fish           external
+   usr time    2.16 secs    0.00 micros    2.16 secs
+   sys time    0.00 secs  169.00 micros    0.00 secs
+
+QUEUE: [[10],[9],[8],[7],[6],[5],[4],[3],[2],[1]]
+FOUND A SOLUTION [7,7,7,7,7,7,7,5,10], count: 592592650
+
+________________________________________________________
+Executed in    2.17 secs    fish           external
+   usr time    2.17 secs    0.00 micros    2.17 secs
+   sys time    0.00 secs  250.00 micros    0.00 secs
+
+
+
+
+rust:
+  3.16+3.16+3.06+3.07+3.15+3.06+3.11+3.12+3.16+3.16=31.21
+  avg: 3.121
+
+Haskell:
+  2.32+2.20+2.15+2.13+2.19+2.15+2.16+2.17+2.16+2.17=21.8
+  avg: 2.18

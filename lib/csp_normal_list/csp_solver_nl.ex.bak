@@ -1,0 +1,53 @@
+defmodule Csp.NormalList.Solver do
+  @compile {:inline, is_solution?: 2, generate: 3, solve: 3}
+
+  @entropy 10
+  @max_digit @entropy
+  @rng @entropy..1
+
+  def init() do
+    # IO.puts("q INIT CHILDREN")
+    # in the form [1], [2], ..
+    Enum.map(@rng, &[&1] )
+  end
+
+  def generate(q, parent_items, stat) do
+    case length(parent_items) >= @max_digit do
+      true ->
+        {q, stat}
+
+      false ->
+        # IO.puts("GEN CHILDREN for #{inspect(parent_items)}")
+        children = for c <- @rng, do: [c | parent_items]
+
+        # add children to stack
+        {children ++ q, stat + @entropy}
+    end
+  end
+
+  def solve([item | t], solution, stat) do
+    # IO.puts("QUEUE: #{inspect(q)}")
+
+    # check if it is a solution?
+    if is_solution?(item, solution) do
+        IO.puts("FOUND A SOLUTION #{inspect(item, charlists: :as_list)}, count: #{stat}")
+        :ok
+
+      else
+        # if not, generate children from this item
+        {q, stat} = generate(t, item, stat)
+
+        if q == [] do
+            IO.puts("q IS EMPTY!, QUITTING!, count: #{stat}")
+            :exit
+
+          else
+            solve(q, solution, stat)
+        end
+    end
+  end
+
+  defp is_solution?(item, solution) do
+    item == solution
+  end
+end

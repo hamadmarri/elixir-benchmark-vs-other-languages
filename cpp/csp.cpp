@@ -1,14 +1,18 @@
+#include <algorithm> // Added for std::equal
+#include <chrono> // Must include this
 #include <iostream>
 #include <stack>
+#include <vector> // Added
 
 using namespace std;
 
-static stack<vector<int> > mystack;
+static stack<vector<int>> mystack;
 
 const int entropy = 10;
 const int max_digit = 10;
 
-void initCh(stack<vector<int> >& mystack) {
+void initCh(stack<vector<int>>& mystack)
+{
     for (int i = 1; i <= entropy; i++) {
         vector<int> e;
         e.insert(e.begin(), i);
@@ -28,8 +32,8 @@ void initCh(stack<vector<int> >& mystack) {
 //     return true;
 // }
 
-inline
-int genCh(stack<vector<int> >& mystack, const vector<int>& parentItems, int stat) {
+inline int genCh(stack<vector<int>>& mystack, const vector<int>& parentItems, int stat)
+{
     if (parentItems.size() >= max_digit) {
         return stat;
     }
@@ -51,7 +55,8 @@ int genCh(stack<vector<int> >& mystack, const vector<int>& parentItems, int stat
     return stat + entropy;
 }
 
-void solve(stack<vector<int> >& mystack, const vector<int>& solution, int stat) {
+void solve(stack<vector<int>>& mystack, const vector<int>& solution, int stat)
+{
     while (true) {
         if (mystack.empty()) {
             cout << "Q IS EMPTY!, QUITTING!, count: " << stat << endl;
@@ -67,7 +72,7 @@ void solve(stack<vector<int> >& mystack, const vector<int>& solution, int stat) 
         // cout << endl;
 
         if (equal(item.begin(), item.end(), solution.begin())) {
-        // if (isSolution(item, solution)) {
+            // if (isSolution(item, solution)) {
             cout << "FOUND A SOLUTION ";
             for (int i : item) {
                 cout << i << " ";
@@ -80,26 +85,27 @@ void solve(stack<vector<int> >& mystack, const vector<int>& solution, int stat) 
     }
 }
 
-int main() {
-    for (int i = 0; i < 10; i++) {
-        auto start = chrono::high_resolution_clock::now();
-        vector<int> solution = {7, 7, 7, 7, 7, 7, 7, 5, 10};
-        mystack = stack<vector<int> >();
-        initCh(mystack);
-        // cout << "init stack ";
-        // for (const auto& s : mystack.top()) {
-        //     cout << s << " ";
-        // }
-        // cout << endl;
+int main()
+{
+    // for (int i = 0; i < 10; i++) {
+    auto start = chrono::high_resolution_clock::now();
+    vector<int> solution = { 7, 7, 7, 7, 7, 7, 7, 5, 10 };
+    mystack = stack<vector<int>>();
+    initCh(mystack);
+    // cout << "init stack ";
+    // for (const auto& s : mystack.top()) {
+    //     cout << s << " ";
+    // }
+    // cout << endl;
 
-        solve(mystack, solution, mystack.size());
-        auto end = chrono::high_resolution_clock::now();
+    solve(mystack, solution, mystack.size());
+    auto end = chrono::high_resolution_clock::now();
 
-        double duration = chrono::duration_cast<chrono::microseconds>(end - start).count();
-        duration /= 1000.0; // Convert to milliseconds
-        duration /= 1000.0; // Convert to seconds
-        cout << "time: " << duration << "s" << endl;
-    }
+    double duration = chrono::duration_cast<chrono::microseconds>(end - start).count();
+    duration /= 1000.0; // Convert to milliseconds
+    duration /= 1000.0; // Convert to seconds
+    cout << "time: " << duration << "s" << endl;
+    // }
 
     return 0;
 }
